@@ -40,7 +40,9 @@ If you need to display information for a query you were profiling in the last 24
 
 Profiling information are stored by EXASOL only for the last 24 hours.
 
+##Features
 
+Beside the standard profiling information provided by EXASOL, EXASOL Explain provide a summary row with the total execution time, the max CPU utilization and the totals of disk read, disk write and network usage.
 
 
 ##Why This
