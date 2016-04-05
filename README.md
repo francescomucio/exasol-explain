@@ -8,6 +8,18 @@ If you need more details about profiling you can check the Profiling chapter on 
 
 Grab the scripts in the scripts folder and run them on you EXASOL. 
 
+Then run the command (open your schema or put your schema name in front of the `profiling` script:
+    
+    alter session set SQL_PREPROCESSOR_SCRIPT = profiling;
+
+Now every time you will run a command it will pass trough the profiling script.
+
+If you want to disable this preprocess script you run:
+
+    alter session set SQL_PREPROCESSOR_SCRIPT = null;
+
+Or replace `null` with a different script.
+
 ## How to Use It
 
 ### explain
@@ -15,6 +27,8 @@ Grab the scripts in the scripts folder and run them on you EXASOL.
     explain select * from my_table;
 
 It's enough to put `explain` in front of any of your queries and in the output window will appear the profiling information for your query.
+
+EXASOL Profile will automagically enable profiling, run the query, disable profiling, flush statistics and show the results. More info [here](#why-this).
 
 **Note** EXASOL need to run the query to show profiling info, so if your query modifies objects or data, they will be changed.
 
@@ -29,7 +43,7 @@ Profiling information are stored by EXASOL only for the last 24 hours.
 
 
 
-##Why this
+##Why this(#why-this)
 
 EXASOL is parallelized RDBMS, it is very fast and doesn't really need much tuning, but for these same reasone people tend to load it with huge amount of data, thinking that the database will be fast anyway. It will, but it can do much better.
 
