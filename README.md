@@ -43,7 +43,7 @@ Profiling information are stored by EXASOL only for the last 24 hours.
 
 
 
-##Why this(#why-this)
+##Why this
 
 EXASOL is parallelized RDBMS, it is very fast and doesn't really need much tuning, but for these same reasone people tend to load it with huge amount of data, thinking that the database will be fast anyway. It will, but it can do much better.
 
