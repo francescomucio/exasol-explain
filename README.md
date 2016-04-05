@@ -43,7 +43,7 @@ Profiling information are stored by EXASOL only for the last 24 hours.
 
 
 
-##Why this
+##Why This
 
 EXASOL is parallelized RDBMS, it is very fast and doesn't really need much tuning, but for these same reasone people tend to load it with huge amount of data, thinking that the database will be fast anyway. It will, but it can do much better.
 
@@ -71,4 +71,4 @@ I found this cumbersome and I started to work on easy way to get the profile of 
 
 
 ##License
-This is released under the whatever license.
+This is released under the [MIT License](http://www.opensource.org/licenses/MIT).
