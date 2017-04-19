@@ -8,9 +8,13 @@ If you need more details about profiling you can check the Profiling chapter on 
 
 Grab the scripts in the scripts folder and run them on you EXASOL. 
 
-Then run the command (open your schema or put your schema name in front of the `profiling` script:
+Then run the command:
     
     alter session set SQL_PREPROCESSOR_SCRIPT = profiling;
+
+You need to be in the same schema where you run the two scripts or add the schema name before `profiling`, like:
+
+    alter session set SQL_PREPROCESSOR_SCRIPT = myschema.profiling;
 
 Now every time you will run a command it will pass trough the profiling script.
 
